@@ -15,6 +15,16 @@
         <meta charset="UTF-8">
         <meta name="robots" content="noindex">
         <!-- Custom HTML head -->
+        <script>
+            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                document.addEventListener('DOMContentLoaded', function () {
+                    const counter = document.createElement('div');
+                    counter.className = 'pageview-counter';
+                    counter.innerHTML = '<img src="https://pageview.ibylich.dev/count?p=' + window.location.pathname + '" alt="Page views">';
+                    document.body.appendChild(counter);
+                });
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="css/variables.css">
